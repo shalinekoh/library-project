@@ -34,7 +34,7 @@ myLibrary.push(book1, book2, book3)
 bookContainer = document.querySelector(".book-container")
 // card = document.querySelector(".card")
 function createBook(books){
-    books.forEach((book) => {
+    books.forEach((book, index) => {
         card = document.createElement("div");
         card.classList.add("card")
 
@@ -61,11 +61,20 @@ function createBook(books){
         readButton = document.createElement("button");
         readButton.setAttribute("id", "readButton");
         readButton.innerHTML = "Read";
-        card.appendChild(readButton)
+        card.appendChild(readButton);
 
-        bookContainer.appendChild(card)
+        bookContainer.appendChild(card);
+
+        closeButton.addEventListener("click", () => {
+            myLibrary.splice(index, 1)
+            displayBook(myLibrary);
+        })
+
     }
     )
 }
-
-createBook(myLibrary)
+function displayBook(myLibrary){
+    bookContainer.innerHTML = "";
+    createBook(myLibrary);
+}
+displayBook(myLibrary)
