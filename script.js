@@ -1,5 +1,3 @@
-// bookContainer = document.querySelector("book-container")
-// card = document.querySelector("card")
 const myLibrary = [];
 
 function Book(title, author, page, read){
@@ -19,21 +17,23 @@ function addBookToLibrary(title, author, page){
 addBookToLibrary(
         title="Hello Beautiful (Oprah's Book Club)",
         author="Ann Napolitano",
-        page=390
+        page=390,
+        read=true
 )
 addBookToLibrary(
     title="All the Sinners Bleed",
     author="S. A. Cosby",
-    page=344
+    page=344,
+    read=true
 )
 addBookToLibrary(
     title="Lady Tan's Circle of Women",
     author="Lisa See",
-    page=357
+    page=357,
+    read=true
 )
 
 bookContainer = document.querySelector(".book-container")
-// card = document.querySelector(".card")
 function createBook(books){
     books.forEach((book, index) => {
 
@@ -62,7 +62,7 @@ function createBook(books){
 
         readButton = document.createElement("button");
         readButton.setAttribute("id", "readButton");
-        readButton.innerHTML = "Read";
+        readButton.innerHTML = book.read == true ? "Read" : "Not Read";
         card.appendChild(readButton);
 
         bookContainer.appendChild(card);
@@ -89,7 +89,6 @@ const dialogSubmitButton = document.getElementById("enter-button");
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pageInput = document.getElementById("page");
-// const input = document.getElementById("title")
 
 addBookButton.addEventListener("click", () => {
     addBookDialog.showModal();
@@ -119,8 +118,6 @@ dialogSubmitButton.addEventListener("click", (event) => {
         bookForm.reportValidity();
     }
 })
-
-
 
 function displayBook(myLibrary){
     bookContainer.innerHTML = "";
