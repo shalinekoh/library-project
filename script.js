@@ -33,6 +33,7 @@ addBookToLibrary(
     read=true
 )
 
+// ADD BOOK FOR HTML
 bookContainer = document.querySelector(".book-container")
 function createBook(books){
     books.forEach((book, index) => {
@@ -80,15 +81,16 @@ function createBook(books){
     )
 }
 
+// DIALOG FORM
 const addBookButton = document.querySelector("header button");
 const addBookDialog = document.getElementById("add-book-dialog");
 const bookForm = document.getElementById("book-form");
 const dialogCloseButton = document.getElementById("close-button");
 const dialogClearButton = document.getElementById("clear-button");
 const dialogSubmitButton = document.getElementById("enter-button");
-const titleInput = document.getElementById("title");
-const authorInput = document.getElementById("author");
-const pageInput = document.getElementById("page");
+const titleInput = document.getElementById("inputTitle");
+const authorInput = document.getElementById("inputAuthor");
+const pageInput = document.getElementById("inputPage");
 
 addBookButton.addEventListener("click", () => {
     addBookDialog.showModal();
