@@ -35,6 +35,7 @@ bookContainer = document.querySelector(".book-container")
 // card = document.querySelector(".card")
 function createBook(books){
     books.forEach((book, index) => {
+        let readToggle = 1;
         card = document.createElement("div");
         card.classList.add("card")
 
@@ -70,6 +71,11 @@ function createBook(books){
             displayBook(myLibrary);
         })
 
+        readButton.addEventListener("click",  function(){
+            book.read = !book.read
+            console.log(book.read)
+            this.innerHTML = book.read == true ? "Read" : "Not Read";
+        })
     }
     )
 }
