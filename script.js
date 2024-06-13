@@ -58,7 +58,7 @@ function createBook(books){
 
         const page = document.createElement("p");
         page.setAttribute("id", "page");
-        page.innerHTML = book.page;
+        page.innerHTML = `${book.page} pages`;
         card.appendChild(page)
 
         readButton = document.createElement("button");
