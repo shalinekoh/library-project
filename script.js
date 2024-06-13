@@ -30,7 +30,27 @@ addBookToLibrary(
     title="Lady Tan's Circle of Women",
     author="Lisa See",
     page=357,
+    read=false
+)
+addBookToLibrary(
+    title="Harry Potter and the Philosopher's Stone",
+    author="J. K. Rowling",
+    page=799,
     read=true
+)
+
+addBookToLibrary(
+    title="Trust",
+    author="Herman Diaz",
+    page=419,
+    read=false
+)
+
+addBookToLibrary(
+    title="I Who Have Never Known Men",
+    author="Jacqueline Harpman",
+    page=208,
+    read=false
 )
 
 // ADD BOOK FOR HTML
