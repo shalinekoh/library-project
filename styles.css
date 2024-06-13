@@ -105,6 +105,8 @@ label {
     cursor: pointer;
     border-radius: 5px;
     border: none;
+    background-color:rgb(1,108,147);
+    color: white;
 }
 
 /* BOOK CARD */
