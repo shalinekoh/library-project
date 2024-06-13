@@ -64,6 +64,7 @@ function createBook(books){
         readButton = document.createElement("button");
         readButton.setAttribute("id", "readButton");
         readButton.innerHTML = book.read == true ? "Read" : "Not Read";
+        readButton.style.backgroundColor = book.read == true ? "maroon" : "darkblue";
         card.appendChild(readButton);
 
         bookContainer.appendChild(card);
@@ -76,6 +77,7 @@ function createBook(books){
         readButton.addEventListener("click",  function(){
             book.read = !book.read
             this.innerHTML = book.read == true ? "Read" : "Not Read";
+            this.style.backgroundColor = book.read == true ? "maroon" : "darkblue";
         })
     }
     )
