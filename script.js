@@ -7,8 +7,8 @@ function Book(title, author, page, read){
     this.read = read;
 }
 
-function addBookToLibrary(title, author, page){
-    book = new Book(title, author, page);
+function addBookToLibrary(title, author, page, read){
+    book = new Book(title, author, page, read);
     myLibrary.push(book);
     return myLibrary;
 }
@@ -18,7 +18,7 @@ addBookToLibrary(
         title="Hello Beautiful (Oprah's Book Club)",
         author="Ann Napolitano",
         page=390,
-        read=true
+        read=false
 )
 addBookToLibrary(
     title="All the Sinners Bleed",
